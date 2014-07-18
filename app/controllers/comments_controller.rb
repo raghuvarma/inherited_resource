@@ -3,7 +3,7 @@ class CommentsController < InheritedResources::Base
   actions :create,  :destroy
   
   def create
-    create! { collection_url }
+    create! { article_path(resource.article) }
   end
   
   
